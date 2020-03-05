@@ -125,5 +125,14 @@
         }
       }
     }},
-  "defaultProject": "microproyecto-dos"
+  "defaultProject": "microproyecto-dos", 
+  "schematics": {
+    "@schematics/angular:component": {
+      "prefix": "aap",
+      "styleext": "sass"
+    },
+    "@schematics/angular:directive": {
+      "prefix": "app"
+    }
+  }
 }
