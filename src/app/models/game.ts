@@ -5,7 +5,7 @@ export class Game {
     genero: string
     desPublic: string
     rating: string
-    pataforma: string
+    plataforma: string[]
     screenshot: string[]
     video: string
 }

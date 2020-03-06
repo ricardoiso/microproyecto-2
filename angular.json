@@ -128,7 +128,7 @@
   "defaultProject": "microproyecto-dos", 
   "schematics": {
     "@schematics/angular:component": {
-      "prefix": "aap",
+      "prefix": "app",
       "styleext": "sass"
     },
     "@schematics/angular:directive": {

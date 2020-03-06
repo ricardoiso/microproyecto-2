@@ -26,4 +26,15 @@ export class FirestoreService {
   public update(documentId: string, data: any, collection: string) {
     return this.firestore.collection(collection).doc(documentId).set({data}, { merge: true});
   }
+  //Delete
+//  public delete(documentId: string, collection: string) {
+//    this.api.deleteTodo(id)
+//      .subscribe(res => {    
+//          this.data.splice(index,1);
+//        }, (err) => {
+//          console.log(err);
+//        }
+//      );
+//  }
+
 }

@@ -8,13 +8,19 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AdminComponent } from './components/admin/admin.component';
+import { BuyComponent } from './components/buy/buy.component';
+import { SeeDetailsComponent } from './components/see-details/see-details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    AdminComponent,
+    BuyComponent,
+    SeeDetailsComponent
   ],
   imports: [
     BrowserModule,
