@@ -1,1 +1,30 @@
-<p>home works!</p>
+<table class="table table-responsive-md list">
+    <thead>
+      <tr class="bg-info">
+        <th>Nombre</th>
+        <th>Cédula</th>
+        <th>Correo</th>
+        <th>Tipo</th>
+        <th class="text-center">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userList">
+        <th scope="row">{{ user.name }}</th>
+        <td>{{ user.identification }}</td>
+        <td>{{ user.user }}</td>
+        <td class="text-capitalize">{{ user.type }}</td>
+        <td class="text-center">
+          <a *ngIf="currentUser.type === 'dentist'" class="mx-2"
+            ><i class="fas fa-book"></i
+          ></a>
+          <a *ngIf="currentUser.type === 'dentist'" class="mx-2"
+            ><i class="fas fa-envelope"></i
+          ></a>
+          <a *ngIf="currentUser.type === 'patient'" class="mx-2"
+            ><i class="fas fa-user-edit"></i
+          ></a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
