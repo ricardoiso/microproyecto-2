@@ -1,39 +1,11 @@
 <div class="container-sm my-bg">
   <h2 class="p-4">List of Video-Games</h2>
-  <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="https://i.blogs.es/5f2c41/1/450_1000.jpg">
-        <img src="https://i.blogs.es/5f2c41/1/450_1000.jpg" alt="Cinque Terre" width="600" height="400">
-      </a>
-      <h4 class="vTitle">Lorem</h4>
-    </div>
-  </div>
-
-
-  <!-- <div class="responsive" *ngFor="let game for games">
+  <div class="responsive" *ngFor="let game of games">
     <div class="gallery">
       <a target="_blank" routerLink="/">
-        <img src= "{{ game.image }}" alt="Forest" width="600" height="400">
+        <img class="game-img"src= "{{ game.background_image }}" alt="Forest" width="600" height="400">
       </a>
-      <h4 class="vTitle">Lorem</h4>
-    </div>
-  </div> -->
-
-  <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img_lights.jpg">
-        <img src="img_lights.jpg" alt="Northern Lights" width="600" height="400">
-      </a>
-      <h4 class="vTitle">Lorem</h4>
-    </div>
-  </div>
-
-  <div class="responsive">
-    <div class="gallery">
-      <a target="_blank" href="img_mountains.jpg">
-        <img src="img_mountains.jpg" alt="Mountains" width="600" height="400">
-      </a>
-      <h4 class="vTitle">Lorem</h4>
+      <div class="vTitle">{{ game.name }}</div>
     </div>
   </div>
 </div>

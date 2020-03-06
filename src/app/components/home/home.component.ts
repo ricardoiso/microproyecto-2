@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GameService } from 'src/app/services/game.service';
+import { Game } from 'src/app/models/game'
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  games: Game[];
+
+  constructor(private game: GameService) { }
 
   ngOnInit() {
+
+    this.game.getLatestGames().subscribe(
+      info => {
+        this.games = info['results']
+      }
+    );
+    
   }
 
 }

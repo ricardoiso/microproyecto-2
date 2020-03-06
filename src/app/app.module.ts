@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { AdminComponent } from './components/admin/admin.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { SeeDetailsComponent } from './components/see-details/see-details.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { SeeDetailsComponent } from './components/see-details/see-details.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
   providers: [],

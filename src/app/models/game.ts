@@ -1,11 +1,13 @@
 export class Game {
-    titulo: string
-    descripcion: string
-    fecha: Date
-    genero: string
-    desPublic: string
-    rating: string
-    plataforma: string[]
+    id: number;
+    name: string;
+    description: string;
+    released: string;
+    background_image: string;
+    rating: number;
+    parent_platforms: [];
+    genres: [];
+    developers: [];
+    publishers: [];
     screenshot: string[]
-    video: string
 }
