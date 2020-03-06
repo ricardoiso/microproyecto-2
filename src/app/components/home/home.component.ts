@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
 
-    this.game.getLatestGames().subscribe(
+    this.game.getLatestGames(20).subscribe(
       info => {
         this.games = info['results']
       }

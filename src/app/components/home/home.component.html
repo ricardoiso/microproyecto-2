@@ -1,11 +1,13 @@
 <div class="container-sm my-bg">
   <h2 class="p-4">List of Video-Games</h2>
+
+
   <div class="responsive" *ngFor="let game of games">
     <div class="gallery">
       <a target="_blank" routerLink="/">
         <img class="game-img"src= "{{ game.background_image }}" alt="Forest" width="600" height="400">
       </a>
-      <div class="vTitle">{{ game.name }}</div>
+      <div class="title">{{ game.name }}</div>
     </div>
   </div>
 </div>

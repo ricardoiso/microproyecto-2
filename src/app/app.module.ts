@@ -12,6 +12,7 @@ import { AdminComponent } from './components/admin/admin.component';
 import { BuyComponent } from './components/buy/buy.component';
 import { SeeDetailsComponent } from './components/see-details/see-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FilterPipe } from 'src/app/pipes/filter.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     AdminComponent,
     BuyComponent,
-    SeeDetailsComponent
+    SeeDetailsComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

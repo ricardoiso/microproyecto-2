@@ -6,20 +6,20 @@ import { HttpClient } from '@angular/common/http'
 })
 export class GameService {
 
-  pageSize: string = '';
+  pageSize: string = 'https://api.rawg.io/api/games?page_size=';
 
-  baseUrl: string = 'https://api.rawg.io/api/'
+  baseUrl: string = 'https://api.rawg.io/api/games';
 
   constructor(private http: HttpClient) { }
 
   getGameDetails(gameId) {
-    let endpoint = `${this.baseUrl}games/${gameId}`;
+    let endpoint = `${this.baseUrl}/${gameId}`;
 
     return this.http.get(endpoint);
   }
 
-  getLatestGames() {
-    let endpoint = `${this.baseUrl}games`;
+  getLatestGames(size) {
+    let endpoint = `${this.pageSize}/${size}`;
 
     return this.http.get(endpoint);
   }
