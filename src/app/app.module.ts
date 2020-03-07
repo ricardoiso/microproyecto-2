@@ -14,6 +14,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
 import { FormsModule, ReactiveFormsModule} from '@angular/forms'; 
 import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { NgbCarouselModule, NgbDatepickerModule } from '@ng-bootstrap/ng-bootstrap';
+
 
 @NgModule({
   declarations: [
@@ -31,6 +33,7 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+    NgbCarouselModule,
     ReactiveFormsModule,
     AngularFirestoreModule,
     AngularFireModule.initializeApp(environment.firebase)
