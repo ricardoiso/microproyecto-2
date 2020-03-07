@@ -1,14 +1,13 @@
 <div class="container-sm my-bg">
   <div class="row">
     <div class="col-6">
-      <h2 class="p-4">List of Video-Games</h2>
+      <h1 class="p-4">List of Video-Games</h1>
     </div>
     <div class="col-6 justify-content-right align-content-center">
-        <input class="form-control mr-sm-2" type="search" [(ngModel)]="gameSearched" placeholder="Escribe un videojuego">
-        <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+        <input class="form-control mr-sm-2" type="search" [(ngModel)]="gameSearched" placeholder="Busca tu videojuego">
     </div>
   </div>
-
+<div class="row">
   <div class="responsive" *ngFor="let game of games | filter: 'name':gameSearched">
     <div class="gallery">
       <a [routerLink]="['/see-details', game.id]">
@@ -16,5 +15,11 @@
       </a>
       <div class="title">{{ game.name }}</div>
     </div>
+  </div>
+</div>
+  <button class="btn btn-info text-center" >Cargas mas juegos</button>
+  <div class="row">
+    <h1>Proximos estrenos: </h1>
+    
   </div>
 </div>
