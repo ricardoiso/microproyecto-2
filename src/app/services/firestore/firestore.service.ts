@@ -10,21 +10,22 @@ export class FirestoreService {
   constructor(
     private firestore: AngularFirestore
   ) { }
+
   //Create
   public create(data: any, collection: string) {
-    return this.firestore.collection(collection).add(data);
+    return this.firestore.collection('videojuegos').add(data);
   }
   //Read
   public get(documentId: string, collection: string) {
-    return this.firestore.collection(collection).doc(documentId).snapshotChanges();
+    return this.firestore.collection('videojuegos').doc(documentId).snapshotChanges();
   }
   //Get
   public getAll(collection: string) {
-    return this.firestore.collection(collection).snapshotChanges();
+    return this.firestore.collection('videojuegos').snapshotChanges();
   }
   //Update
   public update(documentId: string, data: any, collection: string) {
-    return this.firestore.collection(collection).doc(documentId).set({data}, { merge: true});
+    return this.firestore.collection('videojuegos').doc(documentId).set({data}, { merge: true});
   }
   //Delete
 //  public delete(documentId: string, collection: string) {
