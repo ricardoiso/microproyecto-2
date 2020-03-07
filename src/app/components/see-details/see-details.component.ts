@@ -12,8 +12,10 @@ export class SeeDetailsComponent implements OnInit {
 
   game: Game;
   id: number;
+  screenshots: any;
 
-  constructor(private gameService: GameService, private route: ActivatedRoute,) { }
+
+  constructor(private gameService: GameService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
@@ -23,10 +25,16 @@ export class SeeDetailsComponent implements OnInit {
     this.id = param['id'];
     });
 
+    this.gameService.getScreenshots(this.id).subscribe((info: any) => {
+      this.screenshots = info['results'];
+    })
+
     this.gameService.getGameDetails(this.id).subscribe((info: Game) => {
       this.game = info;
       console.log(this.game)
     })
   }
+
+
 
 }

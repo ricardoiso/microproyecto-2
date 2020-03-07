@@ -29,4 +29,14 @@ export class GameService {
 
     return this.http.get(endpoint);
   }
+
+  getScreenshots(gameId){
+    let endpoint=`${this.baseUrl}/${gameId}/screenshots`;
+    return this.http.get(endpoint);
+  }
+
+  getTrailer(gameId) {
+    let endpoint = `${this.baseUrl}/${gameId}/movies`;
+    return this.http.get(endpoint);
+  }
 }

@@ -20,6 +20,15 @@
   <button class="btn btn-info text-center" >Cargas mas juegos</button>
   <div class="row">
     <h1>Proximos estrenos: </h1>
-    
+    <!-- <div class="row">
+      <div class="responsive" *ngFor="let game of games | filter: 'name':gameSearched">
+        <div class="gallery">
+          <a [routerLink]="['/see-details', game.id]">
+            <img class="game-img" src="{{ game.background_image }}" alt="Forest" width="600" height="400">
+          </a>
+          <div class="title">{{ game.name }}</div>
+        </div>
+      </div>
+    </div> -->
   </div>
 </div>

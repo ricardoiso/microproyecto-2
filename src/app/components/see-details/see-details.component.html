@@ -8,7 +8,7 @@
   <div class="row p-4">
     <div class="col-6">
       <ul>
-        <li>Fecha de Lanzamiento: {{ game.released }}</li>
+        <li><span>Fecha de Lanzamiento:</span> {{ game.released }}</li>
         <li><span>Generos:</span>
           <p *ngFor="let game of game.genres"> {{ game.name}} </p>
         </li>
@@ -28,7 +28,7 @@
         </li>
       </ul>
 
-      <img src="{{ game.screenshots}}" alt="">
+      <img *ngFor= "let screenshot of screenshots"src="{{ screenshot.image }}" alt="">
     </div>
 
   </div>
