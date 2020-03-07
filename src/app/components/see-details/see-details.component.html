@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-12 text-center">
       <h1 class="the_title"> {{ game.name }} </h1>
-      <img class="the-img" src="{{ game.background_image }}" alt="">
+      <img class="the-img rounded-lg" src="{{ game.background_image }}" alt="">
     </div>
   </div>
   <div class="row p-4">
@@ -29,17 +29,18 @@
       </ul>
     </div>
     <div class="row justify-content-center align-content-center">
-      <img *ngFor="let screenshot of screenshots" class="mb-5" src="{{ screenshot.image }}" alt="" width="60%" height="auto">
+      <img *ngFor="let screenshot of screenshots" class="mb-5 rounded-lg" src="{{ screenshot.image }}" alt=""
+        width="60%" height="auto">
     </div>
   </div>
 
-
-
-
-  <div class="row p-4">
+  <div class="row pt-4 pb-4">
+    <h2>Descripción</h2>
     <div [innerHTML]="game.description"></div>
     <h2>Trailer:</h2><br>
-    <video src="{{ game.clip.clip }}"></video>
+    <video class="rounded-lg pl-5 ml-4" src="{{ game.clip.clip }}"></video>
   </div>
-  <button class="btn btn-info" [routerLink]="['/buy', game.id]">Comprar</button>
+  <div class="row justify-content-center">
+    <button class="btn btn-info btn-lg" [routerLink]="['/buy', game.id]">Comprar</button>
+  </div>
 </div>
