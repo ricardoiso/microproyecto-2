@@ -1,1 +1,40 @@
-<p>see-details works!</p>
+<div class="container-md p-5">
+  <div class="row">
+    <div class="col-12 text-center">
+      <h1 class="the_title"> {{ game.name }} </h1>
+      <img class="the-img" src="{{ game.background_image }}" alt="">
+    </div>
+  </div>
+  <div class="row p-4">
+    <div class="col-6">
+      <ul>
+        <li>Fecha de Lanzamiento: {{ game.released }}</li>
+        <li><span>Generos:</span>
+          <p *ngFor="let game of game.genres"> {{ game.name}} </p>
+        </li>
+        <li><span>Desarrolladores:</span>
+          <p *ngFor="let game of game.developers"> {{ game.name}} </p>
+        </li>
+      </ul>
+    </div>
+    <div class="col-6">
+      <ul>
+        <li><span>Publicadores:</span>
+          <p *ngFor="let game of game.developers"> {{ game.name}} </p>
+        </li>
+        <li><span>Puntuación: </span>{{ game.rating }}</li>
+        <li><span>Plataformas:</span>
+          <p *ngFor="let platform of game.platforms"> {{ platform['platform'].name}} </p>
+        </li>
+      </ul>
+
+      <img src="{{ game.screenshots}}" alt="">
+    </div>
+
+  </div>
+  <div class="row p-4">
+    <div [innerHTML]="game.description"></div>
+    <h2>Trailer:</h2><br>
+    <video src="{{ game.clip.clip }}"></video>
+  </div>
+</div>

@@ -5,7 +5,7 @@ export class Game {
     released: string;
     background_image: string;
     rating: number;
-    parent_platforms: [];
+    platforms: [];
     genres: [];
     developers: [];
     publishers: [];

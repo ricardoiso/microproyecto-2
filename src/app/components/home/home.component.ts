@@ -10,6 +10,7 @@ import { Game } from 'src/app/models/game'
 export class HomeComponent implements OnInit {
 
   games: Game[];
+  gameSearched;
 
   constructor(private game: GameService) { }
 
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
         this.games = info['results']
       }
     );
+
     
   }
 

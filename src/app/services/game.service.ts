@@ -10,7 +10,7 @@ export class GameService {
 
   baseUrl: string = 'https://api.rawg.io/api/games';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, ) { }
 
   getGameDetails(gameId) {
     let endpoint = `${this.baseUrl}/${gameId}`;

@@ -13,6 +13,7 @@ import { BuyComponent } from './components/buy/buy.component';
 import { SeeDetailsComponent } from './components/see-details/see-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FilterPipe } from 'src/app/pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { FilterPipe } from 'src/app/pipes/filter.pipe';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
